@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            background-color: aqua;
+        }
+        .box1{
+            color: yellow;
+            padding: 10px;  /* Space between an element's content and its border. It creates an inner cushion inside the element. */
+            border: 3px solid blue;  /* border is the line that surrounds an element's content and padding. */
+            margin: 25px;  /* Space outside an element's border */
+            height: 200px;
+            width: 340px;
+            box-sizing: border-box;  /* Makes the width and height of an element include its padding and border, not just the content. */
+        }
+        .box2{
+            color:red ;
+            margin: 35px;  /* When vertical margins of adjacent elements combines, the larger of the two margins will be applied instead of both. */
+            border: 3px solid black;
+            height: 200px;
+            width: 340px;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box box1" >Ima box</div>
+    <div class="box box2" >Ima box2</div>
+    <img style="margin: 25px;" src="margin_padding_borderCSS.jpg" alt="margin_padding_border" height="222">
+</body>
+</html>

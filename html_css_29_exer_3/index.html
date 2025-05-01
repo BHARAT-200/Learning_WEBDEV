@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .card{
+            border: 2px solid grey;
+            border-radius: 25px;
+            padding: 5px;
+            height: 400px;
+            width: 250px;
+            box-shadow: 1px 1px 4px 0.1px grey;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);  /* Moves the element back by 50% of its own width and height, effectively centering it */
+        }
+
+        .box{
+            border: 1px solid rgb(71, 69, 69);
+            border-radius: 40px;
+            text-align: center;
+            display: inline-block;
+            padding: 1px;
+            margin: 2px;
+            width: 40px;
+            height: 10px;
+            font-size: 10px;
+            color: rgb(71, 69, 69);
+            position: relative;
+            left: 10px;
+            top: 5px;
+        }
+
+        #headding{
+            color: rgb(26, 26, 26);
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+            font-weight: 600;
+        }
+
+        .content{
+            font-size: 12px;
+            text-align: center;
+            overflow: hidden;
+            color: rgb(81, 81, 81);
+        }
+
+        .btn{
+            color: rgb(0, 55, 164);
+            background-color: rgb(169, 202, 255);
+            height: 25px;
+            border-radius: 40px;
+            width: 70px;
+            padding: 5px;
+            margin: 5px;
+            box-sizing: border-box;  /* Includes padding and border in the element's total width and height */
+            position: relative;
+            top: 7px;
+            text-align: center;
+            font-size: 12px;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+
+        <img style="border-radius: 25px; height: 200px; width: 250px; margin: auto;" src="Evan.png" alt="Evangelion">  <!--  margin: auto; is used to center an element horizontally when its width is defined -->
+
+        <div class="box">Shinji</div>
+        <div class="box">Asuka</div>
+
+        <h2 id="headding" >Evangelion</h2>
+
+        <p class="content">The story is set 15 years after a worldwide cataclysm in the city of Tokyo-3. The protagonist is Shinji Ikari, a teenage boy recruited by his father Gendo to the mysterious organization Nerv. Shinji must pilot an Evangelion, a giant biomechanical mecha, to fight beings known as Angels.</p>
+
+        <div class="btn">Read more</div>
+
+    </div>
+</body>
+</html>

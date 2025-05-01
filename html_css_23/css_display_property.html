@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .box{
+            border: 2px solid blue;
+            padding: 40px;
+
+            display: inline;  /* Converting box into an inline element, height or width won't work */
+
+            display: inline-block;  /* inline doesn't allow setting width or height, while inline-block does, letting you style dimensions while keeping elements in a line. */
+        }
+
+        .box1{
+            display: none;  /* completely hides an element, removing it from the document flow as if it doesn’t exist. */
+
+            visibility: hidden;  /* hides the element but keeps its space occupied in the layout. */
+        }
+
+        #centre{
+            display: flex;  /* Makes items inside a container line up nicely and adjust their size automatically. */
+
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">More display properties</a>
+    </div>
+
+    <div class="box">A blue box</div>
+
+    <div class="box1">
+        Ima hidden box
+    </div>
+
+    <span>Imma black</span>
+    <span>Boy</span>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media query</title>
+    <style>
+        body{
+            background-color: red;
+        }
+
+        /* A CSS media query is used to apply styles based on device characteristics like screen size.  */
+
+        /* @media not/only mediatype and (expressions){
+            CSS-Code
+        } */
+
+        @media only screen and (max-width: 455px){  /* applies styles when the screen width is 455 pixels or less, usually for small devices like phones. */
+            body{
+                background-color: blue;
+            }
+        }
+
+        @media only screen and (orientation: portrait){  /* targets devices in portrait mode, applying styles only when the device's height is greater than its width. */
+            body{
+                border: 2px solid purple;
+            }
+            .boxes{
+                flex-direction: column;
+            }
+        }
+
+        .boxes{
+            display: flex;
+        }
+
+        .box{
+            width: 344px;
+            height: 344px;
+            background-color: blue;
+            padding: 3px;
+            margin: 3px;
+        }
+         
+    </style>
+</head>
+<body>
+    <div>
+        Imma red
+    </div>
+
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

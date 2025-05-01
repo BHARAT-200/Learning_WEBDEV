@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS List</title>
+    <style>
+        *{
+            padding: 5px;
+            margin: 2px;
+        }
+
+        nav ul li{ 
+            
+            border: 2px solid black;
+            background-color: yellow;
+
+            list-style: devanagari;  /* Change the list style to devanagari */
+
+            list-style-position: inside;  /*  positions the list marker inside the list item's content box, aligning it with the text rather than outside. */
+
+            list-style-type: "🗣️";  /* Using this emoji as the list style */
+
+            /* list-style-image: ;  Can be used to add an image as style */
+            
+        }
+    </style>
+
+</head>
+<body>
+    <nav>  <!-- defines a section that contains navigation links, like menus or site navigation. -->
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    
+</body>
+</html>

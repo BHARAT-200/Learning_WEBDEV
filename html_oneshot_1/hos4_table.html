@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        table, th, td {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Table</h1>
+
+    <table>
+        <!-- Head of the table -->
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Sem</th>
+                <th>Id</th>
+            </tr>
+        </thead>
+        <!-- Body of the table -->
+        <tbody>
+            <tr>
+                <td>Abc</td>
+                <td>2</td>
+                <td>101</td>
+            </tr>
+            <tr>
+                <td colspan="2" >Mno</td>
+                <td>102</td>
+            </tr>
+            <tr>
+                <td>xyz</td>
+                <td>3</td>
+                <td>103</td>
+            </tr>
+        </tbody>
+        <!-- Footer of the table -->
+        <tfoot>
+            <tr>
+                <td colspan="3" >Thanks</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

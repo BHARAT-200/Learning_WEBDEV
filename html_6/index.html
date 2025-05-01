@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This page is about Heading and paragraph">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Form</h1>
+
+    <form action="post">  <!-- A section where users can input data and submit it to a server for processing, post is used to send a lot of data, it's used in most of the cases -->
+
+        <div>  <!-- A container that groups elements for layout and styling without adding default formatting -->
+
+            <label for="username">Enter ur username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter ur name" autofocus>  <!-- autofocus:- user can type value without even select the box -->
+
+        </div>
+
+
+        <div>
+
+            <label for="male">male</label>  <!-- Associates the text "male" with the radio button that has the id="male" -->
+            <input type="radio" name="gender" id="male" value="male">  <!-- Radio button for selecting the "male" option, identified by the id and grouped by the name attribute -->
+
+            <label for="female">female</label>
+            <input type="radio" name="gender" id="female" value="female">  <!-- Value defines what data is sent to the server when this radio button is selected -->
+
+            <label for="tank">tank</label>
+            <input type="radio" name="gender" id="tank" value="tank">  <!-- Name will group these genders together -->
+
+            <label for="helicoptor">helicoptor</label>
+            <input type="radio" name="gender" id="helicoptor" value="helicoptor">
+
+        </div>
+
+
+        <div>
+
+            <label for="sub">subscribe to news letter</label>
+            <input type="checkbox" name="sub" id="sub" value="subbed">
+
+        </div>
+
+
+        <div>
+
+            <label for="com">Comment please:</label>
+            <textarea name="comment" id="com" cols="30" rows="7">Enter ur comment here</textarea>  <!--  Creates a text box for users to input multi-line text, with placeholder text "Enter ur comment here" -->
+
+            <label for="com2">Comment2 please:</label>
+            <textarea name="comment2" id="com2" cols="10" rows="2" placeholder="Enter comment 2"></textarea>  <!-- A placeholder "Enter ur comment here" that disappears when users start typing. -->
+
+        </div>
+
+
+        <div>
+
+            <label for="fru">Fruites:</label>
+            <select name="fruits" id="fru">
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="mango">Mango</option>
+            </select>
+
+            <label for="veg">Vegetables</label>
+            <select name="vegetable" id="veg">
+                <option value="potato">potato</option>
+                <option value="spinach">spinach</option>
+                <option value="tomato">tomato</option>
+            </select>
+
+        </div>
+
+    </form>
+    
+</body>
+</html>

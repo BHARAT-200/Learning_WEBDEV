@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centering Divs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .outer {
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            text-align: center;
+            line-height: 100px;  /* Set line-height equal to height for vertical centering */
+            margin: 10px;
+        }
+
+        /* 1. Using Flexbox */
+        .flex-center {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
+        }
+
+        /* 2. Using Grid */
+        .grid-center {
+            display: grid;
+            place-items: center;     /* Center both horizontally and vertically */
+        }
+
+        /* 3. Using Absolute Positioning */
+        .absolute-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Adjust for perfect centering */
+        }
+
+        /* 4. Using Margin Auto */
+        .margin-auto-center {
+            width: 100px;
+            height: 100px;
+            margin: auto; /* Horizontally and vertically center if height is defined */
+            position: relative;
+        }
+
+        /* 5. Using Table-Cell */
+        .table-cell-center {
+            display: table;
+            width: 100%;
+            height: 100%;
+        }
+
+        .table-cell-center div {
+            display: table-cell;
+            vertical-align: middle; /* Center vertically */
+            text-align: center; /* Center horizontally */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="outer flex-center">
+        <div class="inner">Flexbox</div>
+    </div>
+
+    <div class="outer grid-center">
+        <div class="inner">Grid</div>
+    </div>
+
+    <div class="outer">
+        <div class="inner absolute-center">Absolute</div>
+    </div>
+
+    <div class="outer margin-auto-center">
+        <div class="inner">Margin Auto</div>
+    </div>
+
+    <div class="outer table-cell-center">
+        <div>
+            <div class="inner">Table-Cell</div>
+        </div>
+    </div>
+
+</body>
+</html>

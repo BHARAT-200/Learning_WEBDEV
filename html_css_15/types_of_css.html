@@ -1,0 +1,45 @@
+<!--Three Ways to Add CSS to HTML-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Internal CSS:- A style defined within a <style> tag in the <head> section of an HTML document.  -->
+
+    <style>
+        h1{  /* Applied to all h1 in this html */
+            color: red;
+            background-color: aqua;
+        }
+        
+        div{
+            color: black;
+            background-color: rgb(215, 215, 215);
+        }
+    </style>
+
+    <!-- External CSS:- A stylesheet placed in a separate .css file and linked to an HTML document using the <link> tag. -->
+
+    <link rel="stylesheet" href="style.css">  <!-- Linking style.css with this html code. -->
+
+</head>
+<body>
+
+    <h1 style="color: yellow; background-color: red;" >Three Ways to Add CSS to HTML</h1>  <!-- Inline CSS:- A style applied directly within an HTML element using the style attribute. -->
+    
+    <!-- Inline css property takes priority over Internal and External css property. -->
+
+    <div>
+        <ol type="i" >
+            <li style="color: blue;" >Inline CSS</li>
+            <li style="color: blueviolet;" >Internal CSS</li>
+            <li style="color: black;" >External CSS</li>
+        </ol>
+    </div>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis obcaecati sequi quidem atque facere, earum sunt nihil nisi adipisci omnis tenetur, ipsum laborum magni?</p>
+</body>
+</html>

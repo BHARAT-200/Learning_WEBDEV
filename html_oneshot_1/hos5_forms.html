@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Forms</h1>
+    <form action="/abc.php" >
+        <!-- Name(text) -->
+        <div>
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" required>  <!-- 'name' is used to identify the form data when submitted -->
+        </div>
+
+        <!-- Number(tel) -->
+        <div>
+            <label for="num">Enter your Number:</label>
+            <input type="tel" id="num" placeholder="Number goes here" >  <!-- 'type' specifies the kind of input (here it's a telephone number) -->
+        </div>
+
+        <!-- Email(email) -->
+        <div>
+            <label for="em">Enter email:</label>
+            <input type="email" id="em" required>  <!-- 'id' is used to uniquely identify the element in the document -->
+        </div>
+
+        <!-- Gender(radio) -->
+        <div>
+            <label for="genm">Male</label>
+            <input type="radio" name="gender" id="genm">  <!-- name is used to combine multiple inputs -->
+
+            <label for="genf">Female</label>
+            <input type="radio" name="gender" id="genf">
+        </div>
+
+        <!-- Password(password) -->
+        <div>
+            <label for="pass">Enter passoword</label>
+            <input type="password" id="pass" required>
+        </div>
+
+        <!-- Dob(date) -->
+        <div>
+            <label for="date">Dob</label>
+            <input type="date" id="date">
+        </div>
+
+        <!-- Race(dropdown) -->
+        <div>
+            <label for="race">Select Your Race</label>
+            <select id="race">
+                <option value="black">Black</option>
+                <option value="white">White</option>
+                <option value="Asian">Asian</option>
+                <option value="Hispanic">Hispanic</option>
+            </select>
+        </div>
+
+        <!-- Checkbox -->
+        <div>
+            <label for="cn">Newsletter:</label>
+            <input type="checkbox" id="cn">
+        </div>
+
+        <!-- Feedback -->
+        <div>
+            <label for="fb">Your Feedback</label>
+            <textarea name="Feedback" id="fb" cols="20" rows="2">Enter feedback c:</textarea>
+        </div>
+
+        <button type="submit">Submit!</button>
+    </form>
+
+</body>
+</html>

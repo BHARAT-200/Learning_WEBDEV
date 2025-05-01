@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+
+    <style>
+
+        .card{
+            border: 2px solid #808080;
+            border-radius: 20px;
+            height: 40vw;
+            width: 25vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);  /* Moves the element back by 50% of its own width and height, effectively centering it */
+            padding: 2px;
+        }
+        #cimg{
+            border-radius: 20px;
+            padding: 4px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .text{
+            margin-left: 7px;
+            margin-top: 7px;
+        }
+
+        #natl{
+            border: 2px solid gray;
+            border-radius: 10px;
+            padding: 4px;
+            font-size: 11px;
+        }
+
+        #ctext{
+            font-size: 12px;
+            text-overflow: ellipsis;
+            position: relative;
+            bottom: 10px;
+        }
+
+        #read{
+            text-align: center;
+            border-radius: 12px;
+            background-color: aqua;
+            color: rgb(0, 42, 255);
+            padding: 4px;
+            position: relative;
+            left: 30%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img id="cimg" height="110px" width="190px" src="Evan.png" alt="Evan">
+
+        <span class="text" id="natl" >Nature</span> <span class="text" id="natl" > Lake</span>
+       
+        <h2 class="text" >Evangelion</h2>
+        
+        <p class="text" id="ctext">Neon Genesis Evangelion follows teenager Shinji Ikari, who pilots the biomechanical Eva Unit-01 to fight monstrous Angels under NERV's command. </p>
+        
+        <span id="read" > Read More </span>
+        
+    </div>
+</body>
+</html>

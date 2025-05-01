@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+
+        div{  /* Element selector:- Targets HTML elements by their tag name, applying styles to all instances of that element */
+            background-color: blue;
+        }
+
+        .red{  /* Class selector:- Targets elements of a particular class. */
+            background-color: red;  /* Div with class red will have red background color. */
+        }
+
+        #green{  /* Id selector:- Targets elements of a particular id. */
+            background-color: green;
+        }
+        
+        div > p{  /* Child selector:- Targets direct child elements of a specified parent element. */
+            background-color: black;
+            color: aliceblue;
+        }
+
+        div p{  /* Descendent selector:- Targets elements that are nested within a specified parent element, using a space between selectors. */
+            background-color: black;
+            color: aliceblue;
+        }
+
+        *{ /* Universal selector:- Selects every element */
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        /* Pseudo-selector:- Applies styles to elements based on their state or specific part */
+
+        a:visited{
+            color: purple; /* styles links that the user have been already visited */
+        }
+        a:link{
+            color: blue;  /* Styles the links that have not been visited yet */
+        }
+        a:active{  /* When we click someting */
+            background-color: blueviolet;
+        }
+        a:hover{  /* Styles links when the user hovers over them with a mouse */
+            background-color: black;
+        }
+        
+        p:first-child{  /* Targets the first <p> element that is a child of its parent */
+            background-color: mediumspringgreen;
+        }
+        
+        [data-x="a"]{
+            background-color: brown;
+        }
+        a[href*="wiki"]{  /* Link which contains wiki */
+            color: brown;
+        }
+        a[href$=".org"]{  /* Link which ends with .org */
+            color: brown;
+        }
+        </style>
+
+</head>
+
+<body>
+
+    <div>
+        Imma div
+        <p>
+            Paragraph inside div 
+        </p>
+    </div>
+
+    <div class="red" > 
+        Div with red class
+        <p>
+            Paragraph inside div with red class
+        </p>
+    </div>
+
+    <span id="green" >
+        Span with green id
+        <p>
+            Paragraph inside div with id redgreen
+        </p>
+    </span>
+
+    <div>
+        <article>
+            <p>
+                Paragraph under article under div  <!--Child selector won't work as this p is now under article-->
+            </p>
+        </article>
+    </div>
+
+    <p data-x="a">paragraph with attribute</p>
+
+
+    <a href="https://www.google.com">Google</a>
+    <a href="https://www.youtube.com">YT</a>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;  /* margin creates space outside an element's border, pushing other elements away to control layout spacing. */
+
+            padding: 0;  /* padding creates space inside an element's border, adding space between the content and the border. */
+        }
+
+        /*html{  root element
+            font-size: 12px;
+        }*/
+        
+        .box{
+            box-sizing: border-box;  /* includes padding and border inside the width and height */
+            
+            border: 2px solid black;
+
+            width: 233px;
+            
+            width: 80vw;  /* vw in CSS stands for "viewport width", where 1vw equals 1% of the viewport's width. */
+            
+            height: 10vh;  /* vh in CSS stands for "viewport height", where 1vh equals 1% of the viewport's height */
+
+            margin: auto;  /* margin: auto; centers an element horizontally within its container if a width is set. IT WONT CENTER THE INLINE ELEMENTS */
+
+            background-color: aquamarine;
+        }
+
+        .container{
+            box-sizing: border-box;
+            border: 2px solid black ;
+            width: 80vw;
+            height: 10vh;
+
+            margin: 23px auto;  /* 23px margin for top-bottom and auto for left to right */
+
+            font-size: 16px;
+            background-color: aquamarine;
+
+            min-height: 80vh;  /* sets the minimum height of an element to 80vh, ensuring it takes up at least that much space. Height will increase if we add more data */
+        }
+
+        .container p{
+        font-size: 1.5em;  /* em is a relative unit in CSS that measures font size based on the font size of the parent element, 1.5 em means 1.5 times relative size  */
+
+        font-size: 2rem;   /* rem stands for "root em" and is a relative unit in CSS that measures font size based on the root (html) element's font size  */
+
+        font-size: 16px;
+
+        width: 50%;  /* Takes 50% of parent's width. Won't work if parent doesn't have a width set */
+        }
+        
+        .mycont{
+            box-sizing: border-box;
+            border: 2px solid black ;
+            margin: 23px auto;
+            background-color: red;
+            color: rgb(0, 0, 0);
+            font-size: 22px;
+
+            width: 100vmin;  /* vmin is a CSS unit that represents the smaller value between vw (viewport width) and vh (viewport height). */
+
+            width: 100vmax;  /* vmin is a CSS unit that represents the higher value between vw (viewport width) and vh (viewport height). */
+
+            min-height: 80vh;  /* The height of this container will be 80vh even if it doesn't have any elements */
+        }
+    </style>
+</head>
+<body>
+    <div class="box" >This issa box</div>
+
+    <div class="container" >
+        This issa container
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa nemo impedit?</p>
+    </div>
+
+    <div class="mycont">Imma container</div>
+</body>
+</html>

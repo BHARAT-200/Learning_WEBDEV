@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        :root{
+            --color: black;
+            --bgcolor: yellow;
+        }
+
+        *{
+            margin: 0px;
+            padding: 5px;
+        }
+
+        .list li{
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 2px;
+            margin: 3px;
+            display: inline;
+
+            list-style: none;
+            list-style-position: inside;
+            
+            color: var(--color);
+            background-color: var(--bgcolor);
+            box-shadow: 0px 0px 10px 0.2px black;
+        }
+
+        #centre{
+            display: flex;
+            justify-content: center;
+            background-color: purple;
+        }
+
+        a:hover{
+            color: black;
+        }
+        
+        a:visited{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <nav id="centre">
+        <ul class="list" >
+            <li><a href="https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2">Take u forward</a></li>
+            <li><a href="https://leetcode.com">Leetcode</a></li>
+            <li><a href="https://www.youtube.com">YouTube</a></li>
+            <li><a href="https://www.google.co.in/?client=safari&channel=ipad_bm">Google</a></li>
+        </ul>
+    </nav>
+    <h1>This is home</h1>
+</body>
+</html>

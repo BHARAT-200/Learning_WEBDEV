@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            height: 100%;
+        }
+
+
+        .navi{
+            height: 50px;
+            width: 810px;
+            background-color: purple;
+            position: sticky;
+            top: 0;  /* Add this to make it sticky */
+            margin: auto;
+            box-sizing: border-box;
+            z-index: 999;
+
+        }
+        .green{
+            margin: 0px;
+            background-color: green;
+            height: 400px;
+            width: 810px;
+            margin: auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .pink{
+            background-color: pink;
+            position: relative;
+            display: inline-block;
+            height: 350px;
+            width: 350px;
+            top: 13px;
+            left: 20px;
+        }
+        .blue{
+            background-color: blue;
+            display: inline-block;
+            position: relative;
+            height: 350px;
+            width: 350px;
+            top: 13px;
+            left: 60px;
+        }
+        .txt{
+            height: 20vh;
+            width: 80vw;
+            border: 2px solid black;
+            border-radius: 30px;
+            padding: 7px;
+            margin: auto;
+            position: relative;
+            top: 5px;
+            display: flex;
+            justify-content: center;  /* Centers horizontally */
+            align-items: center;  /* Centers vertically */
+        }
+
+        .circ {
+        background-color: orange;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 10px; /* Add a small offset */
+        right: 10px;
+        z-index: 999; /* Ensure it's above other elements */
+    }
+
+
+        .bottom{
+            position: relative;
+            top: 60px;
+            height: 50px;
+            width: 810px;
+            background-color: black;
+            margin: auto;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navi"></div>
+
+    <div class="green">
+            <div class="pink"></div>
+            <div class="blue"></div>
+    </div>
+    <div class="txt"><p>Neon Genesis Evangelion</p></div>
+    <div class="circ"><p></p></div>
+    <div class="bottom"></div>
+</body>
+</html>

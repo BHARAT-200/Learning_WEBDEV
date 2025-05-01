@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+
+    <style>
+        .box{
+
+            width: 30vw;
+            height: 10vh;
+            border: 2px solid black;
+            white-space: nowrap;  /* prevents text from wrapping to the next line, keeping it all on a single line. */
+
+            
+            /* overflow handles how content is displayed when it overflows its container */
+
+
+            overflow: hidden;  /* hides any content that overflows the container's boundaries without showing scrollbars. */
+
+            overflow: scroll;  /* forces a scroll bar to appear when the content overflows the container, even if it’s not needed. */
+
+            overflow: auto;  /* Will only show scrollbar only when the data overflows */
+
+            /* We can also manage overflow individually */
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+            overflow: hidden auto;  /* overflow is hidden in x and auto in y */
+
+            
+            /* text-overflow specifically deals with clipped text, often adding an ellipsis. */
+
+            text-overflow: ellipsis;  /* shows ... when the content overflows its container. */
+
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="box"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quibusdam sunt laborum, dolore asperiores doloribus id officia exercitationem odit explicabo excepturi facere, recusandae molestiae voluptatibus! Praesentium eaque perspiciatis nam magnam quisquam doloremque necessitatibus exercitationem consequatur temporibus maxime rem reprehenderit architecto, sit non harum facilis odit sequi quia dicta? Cum, quia molestiae. Dignissimos quod ea debitis! </div>
+    
+</body>
+</html>

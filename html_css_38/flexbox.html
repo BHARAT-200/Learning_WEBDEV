@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box</title>
+    <style>
+        .container{  /* Flex box properties are applied on container not the items */
+            border: 2px solid red;
+            height: 88vh;
+            display: flex;
+
+            
+            /* We must add width and height if we want to center the whole box properly */
+
+
+            /* This combination is used to centre the item
+            justify-content: center;  centre horizontally
+            align-items: center;  centre vertically */
+
+            justify-content: center;  /* To allign items at centre horizontally(depends on main axis i.e. flex-direction) */
+            justify-content: flex-start;  /* To allign items at start horizontally */
+            justify-content: flex-end;  /* To allign items at end horizontally */
+            justify-content: space-between;  /* To allign items at even spaces */
+            justify-content: space-around;  /* To allign items at even spaces(no space at start or end) */
+
+            align-items: center;  /* To allign items at centre vertically. Used when items can fit it one line */
+            align-content: center;  /* To allign items at centre vertically. Used when items can fit it multiple line */
+
+            flex-direction: column;  /* The items will be alligned from up to down */
+            flex-direction: column-reverse;  /* The items will be alligned from up to down, but in reversed order */
+            flex-direction: row;  /* The items will be alligned from left to right(default) */
+
+            flex-wrap: wrap;   /* Allows flex items to wrap onto multiple lines if needed */
+            flex-wrap: wrap-reverse;   /* Allows flex items to wrap onto multiple lines in reverse if needed */
+            flex-flow: row wrap;  /* Takes flex-direction and flex-wrap. It sets flex direction to row and allows wrapping onto multiple lines */
+
+            gap: 22px;  /* Sets the spacing between rows and columns in a flex or grid container. It is similar to margin but applies spacing between flex/grid items, not around them */
+            row-gap: 20px;
+            column-gap: 10px;
+            gap: 20px 10px;  /* row-gap then column-gap */
+        }
+
+        .item{
+            height: 32px;
+            width: 32px;
+            border: 2px solid black;
+            background-color: blueviolet; 
+            margin: 4px;
+        }
+        
+        .order-1{   /* Higher values make the element appear later in the flex container(default order is 0) */
+            order: 1;
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+
+        .item1{
+            flex-grow: 2;  /* Defines how much a flex item should grow relative to others (default is 0) */
+            flex-shrink: 2;  /* Defines how much a flex item should shrink relative to others when space is limited (default is 1) */
+            align-self: center;  /* Aligns the individual flex item vertically in the center of the container */
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item item1">1</div>
+            <div class="item order-3">2</div>
+            <div class="item">3</div>
+            <div class="item">3</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+        </div>
+    </main>
+</body>
+</html>

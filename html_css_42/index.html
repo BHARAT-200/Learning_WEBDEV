@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: beige;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transform-origin: center;  /* Defines the center as the point for transformations, we can change it using degree */
+            transform-origin: 32% 0%;  /* Set the pivot point 32% from the left and at the top edge */
+
+            transform: rotate(40deg);  /* Rotate an item 40 degrees to the right */
+            transform: rotate(0.25turn);  /* Rotate an item 0.25 turn (90 degree). 1 turn is 360 degree */
+
+            transform: rotateX(45deg);  /* Rotate an 45 degrees in the X axis */
+            transform: rotateY(45deg);  /* Rotate an 45 degrees in the Y axis */
+            transform: rotateZ(10deg);  /* Rotate an 10 degrees in the Z axis */
+
+            transform: scale(1.5);  /* Increase the size of an element 1.5 times */
+            transform: scalex(1.5);  /* Increase the size of an element 1.5 times in X axis */
+
+            transform: skew(25deg);  /* skews( pushing the top of a rectangle to one side while the bottom stays still ) an element 25 degree */
+
+            transform: translate(34px);  /* Shift element right by 34px */
+            transform: translateX(30px);  /* Shift element right by 30px */
+            transform: translateY(20px);  /* Shift element down by 20px */
+            transform: translateZ(50%);  /* Shift element forward by 50% in 3D space */
+
+            transform: skew(20px) translate(20px) rotate(20px);  /* We can apply multiple transform properties at once */
+
+
+
+
+        }
+        .container{
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid purple;   
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"> box </div>
+    </div>
+</body>
+</html>

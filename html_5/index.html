@@ -1,0 +1,85 @@
+<!-- Image, Table, List -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Image -->
+    <img width="670" height="430" src="Evan.png" alt="Evangelion"> <!-- alt will display "Evangelion" if the image isn't loadeded. It is optional to use -->
+
+    <br>
+    <!-- Table -->
+    <table>
+
+        <thead>  <!-- Defines the header section of a table -->
+
+            <caption>Student Details</caption>
+
+            <tr>  <!-- Table Row -->
+                <th>Name</th>  <!-- Table Heading -->
+                <th>Age</th>
+                <th>sem</th>
+            </tr>
+        </thead>
+
+
+        <tbody>  <!-- Groups the body content of a table -->
+
+            <tr>
+                <td>Bharat</td>  <!-- Table Data -->
+                <td>19</td>
+                <td>3rd</td>
+            </tr>
+    
+            <tr>
+                <td colspan="2">Sam</td>  <!-- Sam will take 2 columns worth of space -->
+                <td> 4th</td>
+            </tr>
+    
+            <tr>
+                <td>Alex</td>
+                <td rowspan="2" >21</td>
+                <td>6th</td>
+            </tr>
+
+        </tbody>
+
+
+        <tfoot>  <!-- Defines the footer section of a table -->
+
+            <tr>
+                <td>Van</td>
+                <td rowspan="2" >23</td>
+                <td>6th</td>
+            </tr>
+
+        </tfoot>
+
+    </table>
+   
+    
+    <br>
+    <!-- List -->
+
+    <h3>Unordered List</h3>
+    <ul type="square" >  <!-- Unordered List -->  <!-- Type is used to change point's style and is optional -->
+        <li>Alex</li>
+        <li>Bharat</li>
+        <li>Sam</li>
+    </ul>
+
+    <h3>Ordered List</h3>
+    <ol type="A" >  <!-- Unordered List -->  <!-- Type is used to change number's style and is optional -->
+        <li>Alex</li>
+        <li>Bharat</li>
+        <li>Sam</li> 
+    </ol>
+</body>
+</html>

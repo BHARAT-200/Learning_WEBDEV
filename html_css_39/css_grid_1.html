@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grid</title>
+    <style>
+        .container{
+            width: 80vw;
+            height: 40vh;
+            /* We must add width and height if we want to center the whole box properly */
+
+            justify-items: center;
+            align-items: center;
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: [first]120px [second]100px [third];  /* Defines two columns(up to down): first 120px with name first, second 100px with name second, third is the last line */
+            grid-template-rows: 100px 100px 100px;  /* Defines two rows(rigth to left): first 100px, second 100px, third 200px */
+            /* grid-template-columns: 1fr 1fr 1fr;  fr is fraction, each 1fr gets equal share of available space */
+            gap: 44px;  /* To add gaps b/w elements */
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+
+        .items{
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+
+        .item-1{
+            grid-row: 1/2;  /* places item in row 1 to row 2 */
+            grid-column: 1/2;  /* places item in column 1 to column 2 */
+        }
+        
+        .item-4{
+            grid-row: 1/2;
+            /* grid-row-start: 1 ;  This is the equivalent of grid-row: 1/2;
+            grid-row-end: 2; */
+            grid-column: 1/2;
+        }
+
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item-1">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items item-4">4</div>
+        <div class="items">5</div>
+    </div>
+</body>
+</html>

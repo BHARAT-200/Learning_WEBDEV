@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on css selectors</title>
+    <style>
+        .box:first-child{  /* Box which is the first child of its parent */
+            background-color: red;
+        }
+
+        .box::first-line{  /* First line of every box */
+            color: blue;
+        }
+        .box::first-letter{  /* First letter of every box */
+            color: honeydew;
+        }
+
+        .boxes *{  /* Selecting everything inside boxes */ 
+            color: aqua;
+            border: 2px solid black;
+        }
+
+        [data-color="primary"]{  /* Selecting element with data-color="primary" */
+            margin-top: 44px;
+        }
+
+        .box:nth-child(odd){  /* Accesing all the odd childs */ 
+            background-color: black;
+        }
+
+        .box:nth-last-child(1){  /* Accesing the 1st child from botto */ 
+            background-color: red;
+        }
+
+        .boxes::before{  /* pseudo element: Inserts an element in boxes before other box elements */
+            content: "dosa idli";
+            color: darkgrey;
+        }
+
+        .boxes::after{  /* pseudo element: Inserts an element in boxes after other box elements */
+            content: "sambhar chutney chutney";
+            color: aquamarine
+        }
+
+        ::selection{  /* Changes the color of the text in entire webpage when its selected */
+            color: greenyellow;
+            background-color: coral;
+        }
+
+        input::placeholder{  /* Select the placeholder in inupt */
+            color: blue;
+            font-size: 21px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box">Hey Imma box Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odio laudantium natus vero voluptatem? Eius, enim totam accusamus ipsa dicta neque vel laborum itaque quaerat ab autem doloremque dignissimos provident impedit asperiores aperiam?</div>
+        <div data-color="primary" class="box">Hey Imma box</div>
+        <div class="box">Hey Imma box</div>
+        <input type="text" placeholder="Type yo name:">
+    </div>
+</body>
+</html>
