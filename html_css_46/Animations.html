@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Animations</title>
+    <style>
+        .container{
+            background-color: rgb(9, 106, 106);
+            height: 80vh;
+            width: 30vw;
+        }
+        .box{
+            height: 45px;
+            width: 34px;   
+            animation-name: ani1;  /* The name of animation we wanna apply */
+            animation-duration: 2s;  /* Animation will last for 2 seconds */
+            animation-iteration-count: infinite;  /* Amount of times animation will work (can be infinite or a number) */
+            animation-timing-function: ease-in-out;  /* Start and end the animation slowly */
+            animation-delay: 1s;  /* A delay of 1 seconds before the animation starts */
+            animation-direction: alternate-reverse;  /* Play animation forward then backward, starting in reverse */
+            /* animation-play-state: paused;  Pause the animation at a certain point */
+
+            animation: ani1 2s ease-in 1s infinite alternate-reverse, ani2 4s ease 1s infinite alternate;  /* We can use multiple animations separated by , (it won't work here as both ani1 & ani2 are using transform) */
+        }
+
+        /* Note:- Both any1 and ani2 are using transform property.So, only one can apply at a time. */
+        @keyframes ani1 {
+            from{
+                background-color: aqua;
+                transform: translateX(0px);
+            }
+            to{
+                background-color: lightcoral;
+                transform: translateX(400px);
+            }
+        }
+
+        @keyframes ani2 {
+            0%{
+                transform: rotate(60deg);
+                padding: 100px;
+            }
+            20%{
+                transform: rotate(120deg);
+                padding: 80px;
+            }
+            40%{
+                transform: rotate(180deg);
+                padding: 60px;
+            }
+            60%{
+                transform: rotate(240deg);
+                padding: 40px;
+            }
+            80%{
+                transform: rotate(300deg);
+                padding: 20px;
+            }
+            100%{
+                transform: rotate(350deg);
+                padding: 0px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+        </div>
+    </div>
+</body>
+</html>
