@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+    <style>
+        img{
+            border: 2px solid black;
+            height: 300px;
+            width: 450px;
+            object-fit: contain;
+        }
+
+        #img1{
+            filter: blur(3px);  /* To blur an image */
+        }
+        
+        #img2{
+            filter: brightness(300%);  /* To change the brightness of an image */
+            filter: contrast(2);  /* To change the contrast of an image */
+            filter: opacity(0.7);  /* To adjust the opacity of an image*/
+            filter: brightness(300%) contrast(200%) opacity(80%);  /* We can use multiple properties at the same time */
+            
+        }
+        
+        #img3{
+            filter: grayscale(20%);  /* To grayscale an image */
+            filter: sepia(50%);  /* Applies a light brown tone to the image (sepia effect) */
+            filter: invert(0.1);  /* To invert an image (0 to 1) */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="img1" src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="">
+        <img id="img2" src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="">
+        <img id="img3" src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="">
+    </div>
+</body>
+</html>
