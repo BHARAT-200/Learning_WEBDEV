@@ -24,6 +24,17 @@
             animation: ani1 2s ease-in 1s infinite alternate-reverse, ani2 4s ease 1s infinite alternate;  /* We can use multiple animations separated by , (it won't work here as both ani1 & ani2 are using transform) */
         }
 
+        .box2{
+            height: 45px;
+            width: 34px;
+            background-color: lightblue;   
+        }
+        
+        .box2:hover {
+            animation: ani3 2s ease-in 1s 5;
+        }
+
+
         /* Note:- Both any1 and ani2 are using transform property.So, only one can apply at a time. */
         @keyframes ani1 {
             from{
@@ -61,8 +72,20 @@
                 transform: rotate(350deg);
                 padding: 0px;
             }
-            
+ 
         }
+
+
+        @keyframes ani3 {
+            0%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(2);
+            }
+ 
+        }
+
     </style>
 </head>
 <body>
@@ -71,5 +94,6 @@
 
         </div>
     </div>
+    <div class="box2" ></div>
 </body>
 </html>
