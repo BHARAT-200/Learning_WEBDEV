@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing ball</title>
+    <style>
+        .container{
+            height: 80vh;
+            width: 80vw;
+            background-color: aqua;
+            position: relative;
+        }
+
+        .box{
+            height: 80px;
+            width: 80px;
+            background-color: coral;
+            border-radius: 70px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: anix 10s ease-in infinite, aniy 1s ease-out infinite alternate;
+        }
+
+        @keyframes anix {
+            from{
+                left: 0%;
+            }
+            to{
+                left: 100%;
+            } 
+        }
+
+        @keyframes aniy {
+            from{
+                bottom: 0%;
+            }
+            to{
+                bottom: 100%;
+            } 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
