@@ -1,53 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 *{
     padding: 0;
     margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: black;
 }
 
 .main{
-    height: 80vh;
+    height: 63vh;
     background-image: url(assets/images/bg.jpg);
     position: relative;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: max(1400px, 100vw);
+    /* background-size: 100vw;  Using 100vw on small screens can shrink the background image too much, causing blurriness or layout issues. */
+    background-size: max(1600px, 100vw);  /* Ensures that the background image is never smaller than 1400px, even on small screens. */
 }
 
 .main .box{
-    height: 80vh;
-    width: 100%;
+    height: 70vh;
+    width: 100%;  /* 100% of it's parrent */
     position: absolute;
     top: 0;
-    opacity: 40%;
+    opacity: 70%;
     background-color: black;
 }
 
 nav{
-    max-width: 60vw;
+    max-width: 75vw;
     height: 62px;
-    justify-content: space-between;
+    margin: auto;  /* To place nav in the centre of main */
     display: flex;
-    margin: auto;  /* To place nav in centre */
+    justify-content: space-between;
     align-items: center;
 }
 
 nav img{
-    width: 120px;
-    position: relative;
-    z-index: 5;
+    width: 130px;
 }
 
-nav button{
+nav img, nav button {
     position: relative;
     z-index: 5;
+    margin-top: 15px;
 }
+
 
 .txt{
-    height: 100%;  /* Takes 100% height of its parent (main) */
+    font-family: "Martel Sans", sans-serif;
+    height: calc(100% - 62px);  /* Takes 100% - 62px(navbar height) height of its parent (main) */
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
     position: relative;
-    z-index: 5;
+    gap: 23px;
+    padding: 0 30px;  /* Padding 0 in top & bottom and 30 in left & right to stop text from touching corners in small screen */
+}
+
+.txt> :first-child{
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;  /* For smaller screen the text on multiple lines will be in centre */
+}
+
+.txt> :nth-child(2){
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.txt> :nth-child(3){
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+.btn{
+    padding: 10px 20px; 
+    border: none;  /* removes the default border that browsers applies to <button>, <input> and other similar elements */
+    font-weight: 400;
+    background-color: rgba(26, 26, 26, 0.686);
+    margin: 0px 0px 0px 10px;
+    color: white;
+    border-radius: 2px;
+}
+
+.inp-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.main input{
+    color: white;
+    border: none;
+    background-color: rgba(23,23,23,0.7);
+    border: 2px solid rgba(169, 169, 169, 0.7);
+    padding: 11px 35px 12px 35px;
+
+    font-weight: 400;
+    border-radius: 4px;
+    font-size: 17px;
+}
+
+.btn-red{
+    color: white;
+    background-color: red;
+    padding: 8px 25px;
+    border-radius: 4px;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+
+.btn-red-sm{
+    color: white;
+    background-color: red;
+}
+
+.separation{
+    height: 7px;
+    background-color: rgb(52, 52, 52);
+    position: relative;
+    z-index: 100;
+}
+
+.first{
+    margin: auto;
+    max-width: 70vw;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.secimg{
+    position: relative;
+}
+
+.secimg img{
+    width: 588px;
+    position: relative;
+    z-index: 10;
+}
+
+.secimg video{
+    position: absolute;
+    z-index: 1;
+    width: 429px;
+    top: 90px;
+    right: 82px;
+}
+
+.btn:hover {
+    cursor: pointer;  /* makes the mouse cursor turn into a hand icon to indicate the element is clickable. */
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.first > div{
+    display: flex;
+    flex-direction: column;
+    padding: 34px 0;
+}
+
+.first > div :first-child{
+    font-size: 48px;
+    font-weight: bolder;
+    z-index: 55;
+}
+.first > div :nth-child(2){
+    font-size: 24px;
+}
+
+.secimg3 video{
+    transform: scale(1.15);
+}
+
+.faq{
+    background-color: black;
+    color: white;
+    padding: 40px 24px;
+}
+
+.faq h2{
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.faqbox{
+    display: flex;
+    background-color: #2d2d2d;
+    padding: 24px;
+    max-width: 50vw;
+    margin: 10px auto;
+    font-size: 24px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+.faqbox:hover{
+    background-color: #414141;
+    transform: scale(1.075);
+    transition: transform 0.3s cubic-bezier(0.63, 0.29, 0.51, 0.86);
+}
+
+footer{
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+}
+
+.questions{
+    padding: 24px;
+    margin-top: 38px;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+    padding: 34px;
+}
+
+@media screen and (max-width: 1300px){
+    nav{
+        max-width: 90vw;
+    }
+
+    .first{
+        flex-wrap: wrap;
+    }
+
+    .secimg img{
+        width: 388px;
+        position: relative;
+        z-index: 10;
+    }
+    
+    .secimg video{
+        position: absolute;
+        z-index: 1;
+        width: 300px;
+        top: 97px;
+        right: 53px;
+    }
+
+    .txt> :first-child{
+        font-size: 32px;
+    }
+
+    .txt> :nth-child(2){
+        font-size: 18px;
+    }
+
+    .txt> :nth-child(3){
+        font-size: 18px;
+    }
+
+    .inp-btn{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .main input{
+        color: white;
+        border: none;
+        background-color: rgba(23,23,23,0.7);
+        border: 2px solid rgba(169, 169, 169, 0.7);
+        padding: 7px 25px 7px 25px;
+    
+        font-weight: 400;
+        border-radius: 4px;
+        font-size: 15px;
+    }
+
+    .btn-red{
+        padding: 6px 17px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .faq h2{
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 710px){
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        color: white;
+        padding: 34px;
+        gap: 25px;
+    }
+}
+
+.footer-item{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.footer a{
+    font-size: 14px;
+    color: white;
 }
