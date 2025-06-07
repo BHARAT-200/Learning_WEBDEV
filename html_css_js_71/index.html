@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting and Removing elements using DOM JS</title>
+</head>
+<body>
+    <div class="container red bg-green">
+        <div class="box">Imma box</div>
+    </div>
+
+    <script>
+        let cont = document.querySelector(".container");
+        let div = document.createElement("div");  // create a new <div> element
+        div.innerHTML = "This is <b>innner html</b>";  // add inner html to div
+        div.setAttribute("class", "created");  // add class = "created" on div
+        cont.append(div);  // adds div inside .container at the end
+
+        let div2 = document.createElement("div");  // create a new <div> element
+        cont.prepend(div2);  // adds div2 inside .container at the beginning
+
+        let div3 = document.createElement("div");
+        cont.before(div3);  // adds div3 before .container
+
+        cont.insertAdjacentHTML("afterbegin", "<b> This is an html </b>");  // inserts HTML inside the .container at start
+        cont.insertAdjacentHTML("beforeend", "<b> This is an html </b>");  // inserts HTML inside the .container at end
+
+        cont.insertAdjacentHTML("afterend", "<b> This is an html </b>");  // inserts HTML after .container outside it
+        cont.insertAdjacentHTML("beforebegin", "<b> This is an html </b>");  // inserts HTML before .container outside it
+
+        cont.div3.remove();  // removes the div3 element inside .container
+
+        console.log(cont.classList);  // returns a DOMTokenList(array like structure) of all the classes in .container
+        
+        console.log(cont.className);  // returns all class names in .container as a single string
+
+        cont.classList.add("abc");  // adds class "abc" to .container
+
+        cont.classList.remove("abc");  // removes class "abc" from .container
+
+        cont.classList.toggle("abc");  // toggles(remove if present, add if not) class "abc" from .container
+        </script>
+</body>
+</html>
